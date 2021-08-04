@@ -28,4 +28,10 @@ public class Teacher extends Person{
 
         //"My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2."
     }
+
+    public String introduceWith(Student student) {
+        return String.format("My name is %s. I am %d years old. I am a Teacher. I teach %s.", getName(), getAge(), student.getName());
+
+
+    }
 }
