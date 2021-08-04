@@ -30,8 +30,9 @@ public class Teacher extends Person{
     }
 
     public String introduceWith(Student student) {
-        return String.format("My name is %s. I am %d years old. I am a Teacher. I teach %s.", getName(), getAge(), student.getName());
-
-
+        if(klass != null) {
+            return String.format("My name is %s. I am %d years old. I am a Teacher. I don't teach %s.", getName(), getAge(), student.getName());
+        } else
+            return String.format("My name is %s. I am %d years old. I am a Teacher. I teach %s.", getName(), getAge(), student.getName());
     }
 }
