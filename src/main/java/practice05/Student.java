@@ -15,6 +15,7 @@ public class Student extends Person{
     }
 
     public String introduce(){
-        return "I am a Student. I am at Class " + klass + ".";
+        return String.format("My name is %s. I am %d years old. I am a Student. I am at Class %d.", getName(), getAge(), klass);
+//                "I am a Student. I am at Class " + klass + ".";
     }
 }
