@@ -12,4 +12,10 @@ public class Teacher extends Person{
     public Klass getKlass() {
         return klass;
     }
+
+    public String introduce() {
+        return String.format("My name is %s. I am %d years old. I am a Teacher. I teach %s.", getName(), getAge(), getKlass().getDisplayName());
+
+        //"My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2."
+    }
 }
