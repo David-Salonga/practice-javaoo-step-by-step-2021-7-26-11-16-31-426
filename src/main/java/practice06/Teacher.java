@@ -3,6 +3,7 @@ package practice06;
 public class Teacher extends Person{
     private Klass klass;
 
+
     public Teacher(String name, int age, Klass klass) {
         super(name, age);
         this.klass = klass;
@@ -30,9 +31,15 @@ public class Teacher extends Person{
     }
 
     public String introduceWith(Student student) {
-        if(klass != null) {
+
+    //Write an introduceWith method in Teacher class, pass in a student as parameter, such as Jerry, if Jerry is a class taught by Teacher, the return form is as follows:
+
+        if(klass.getNumber() !=  student.getKlass().getNumber()) {
             return String.format("My name is %s. I am %d years old. I am a Teacher. I don't teach %s.", getName(), getAge(), student.getName());
-        } else
-            return String.format("My name is %s. I am %d years old. I am a Teacher. I teach %s.", getName(), getAge(), student.getName());
+        }
+
+        return String.format("My name is %s. I am %d years old. I am a Teacher. I teach %s.", getName(), getAge(), student.getName());
     }
+
+    
 }
