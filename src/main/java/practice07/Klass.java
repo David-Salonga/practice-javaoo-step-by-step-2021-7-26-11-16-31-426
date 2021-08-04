@@ -19,4 +19,8 @@ public class Klass {
     public Integer getNumber() {
        return klass;
     }
+
+    public String getDisplayName() {
+        return "Class " + klass;
+    }
 }
